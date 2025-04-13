@@ -1,0 +1,101 @@
+.hero {
+  color: aliceblue;
+  width: 100%;
+  min-height: 100vh;
+
+  background: linear-gradient(rgba(1, 1, 19, 0.493), rgba(0, 0, 0, 0.226)),
+    url("../../assets/wallpaper.webp");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 300px;
+  box-shadow: 0px 2px 34px 4px rgba(0, 0, 0, 0.712);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.hero-text .btn {
+  position: absolute;
+  top: 90%;
+  display: flex;
+
+  text-align: center;
+  align-items: center;
+  transform: rotate(90deg);
+
+  transition: top 0.6s;
+}
+
+.hero-text .btn:hover {
+  opacity: 0.8;
+  top: 91%;
+}
+
+.hero span {
+  background: var(--gradient-color);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* media query */
+@media (max-width: 950px) {
+  .hero .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-text h1 {
+    font-size: 30px;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-text h1 {
+    font-size: 20px;
+  }
+
+  .hero-text {
+    padding: 20px;
+  }
+
+  .hero-text h1 span {
+    font-size: 25px;
+  }
+
+  .hero-text p {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .hero {
+    margin-bottom: 0px;
+  }
+}

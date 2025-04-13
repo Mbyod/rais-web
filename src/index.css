@@ -1,0 +1,53 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap"); */
+
+@font-face {
+  font-family: "Tektur";
+  src: url("./assets/fonts/Tektur-Regular.ttf");
+  src: url("./assets/fonts/Tektur-Medium.ttf");
+  /* src: url("./assets/fonts/Tektur-Bold.ttf"); */
+}
+
+:root {
+  --gradient-color: linear-gradient(
+    90deg,
+    rgb(73, 109, 180) 6%,
+    rgb(27, 124, 216) 67%
+  );
+
+  --accent-color: rgba(49, 143, 231, 0.808);
+
+  --main-dark-color: rgb(34, 33, 33);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  border: 0;
+  list-style: none;
+
+  font-family: "Tektur", sans-serif;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* media query */
+
+@media (max-width: 1100px) {
+  .container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}

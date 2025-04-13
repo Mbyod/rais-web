@@ -1,0 +1,169 @@
+nav {
+  color: aliceblue;
+  width: 100%;
+  padding: 4px 0;
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  z-index: 10;
+
+  transition: 0.5s;
+}
+
+.logo {
+  max-height: 100px;
+  cursor: pointer;
+}
+
+.call-icon {
+  max-height: 20px;
+}
+
+.nav--call-section {
+  display: flex;
+  column-gap: 3px;
+  text-align: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 50px;
+}
+
+nav ul li:hover {
+  opacity: 0.8;
+}
+
+.btn {
+  background: var(--gradient-color);
+  color: azure;
+  padding: 14px 14px;
+  font-size: 14px;
+
+  border-radius: 30px;
+  cursor: pointer;
+
+  border: 0;
+  outline: 0;
+
+  box-shadow: 11px 17px 36px -13px rgba(0, 0, 0, 0.5);
+
+  transition: 0.5s;
+}
+
+nav .btn:hover {
+  opacity: 0.8;
+}
+
+/* li a {
+  transition: 0.5s;
+} */
+
+li a.active {
+  color: var(--accent-color);
+  transition: 0.8s ease;
+}
+
+/* li a.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  color: var(--gradient-color);
+
+
+} */
+
+.dark-nav {
+  /* background: linear-gradient(
+    90deg,
+    rgb(73, 109, 180) 6%,
+    rgb(27, 125, 216) 67%
+  ); */
+  background-color: rgb(34, 33, 33);
+  transition: 0.5s ease-in-out;
+}
+
+.burger-menu {
+  display: none;
+}
+
+/* media query */
+
+@media (max-width: 1200px) {
+  nav ul {
+    column-gap: 30px;
+  }
+}
+
+@media (max-width: 950px) {
+  nav ul {
+    position: fixed;
+    flex-direction: column;
+
+    top: 0;
+    right: 0px;
+    bottom: 0;
+    background: rgba(34, 33, 33, 0.836);
+
+    width: 300px;
+    padding-top: 100px;
+
+    transition: 0.5s;
+    z-index: -1;
+  }
+
+  nav .btn {
+    display: flex;
+    /* display: none; */
+  }
+
+  nav ul li {
+    margin: 25px 40px;
+  }
+
+  .burger-menu {
+    width: 60px;
+    position: relative;
+
+    display: block;
+    cursor: pointer;
+  }
+
+  .hide-burger-menu {
+    right: -300px;
+  }
+
+  a.active-hero {
+    transition: 0.8s ease;
+    background: var(--gradient-color);
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    max-height: 70px;
+  }
+
+  .burger-menu {
+    max-width: 50px;
+  }
+
+  nav {
+    font-size: 15px;
+  }
+
+  nav ul {
+    width: 280px;
+  }
+}
