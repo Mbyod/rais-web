@@ -45,7 +45,7 @@ const Navbar = () => {
           <Link
             to="infoSection"
             smooth={true}
-            offset={-320}
+            offset={-280}
             duration={500}
             activeClass="active"
             spy={true}
